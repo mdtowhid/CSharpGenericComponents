@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\Components.deps.json
+C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\Components.dll
+C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\Components.pdb
+C:\Users\hp\Desktop\GenericComponents\Components\obj\Debug\netcoreapp3.1\Components.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\GenericComponents\Components\obj\Debug\netcoreapp3.1\Components.AssemblyInfo.cs
+C:\Users\hp\Desktop\GenericComponents\Components\obj\Debug\netcoreapp3.1\Components.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\GenericComponents\Components\obj\Debug\netcoreapp3.1\Components.dll
+C:\Users\hp\Desktop\GenericComponents\Components\obj\Debug\netcoreapp3.1\Components.pdb
+C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\ComponentInterfaces.dll
+C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\ComponentInterfaces.pdb
+C:\Users\hp\Desktop\GenericComponents\Components\obj\Debug\netcoreapp3.1\Components.csproj.CopyComplete
+C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\ComponentsBiz.dll
+C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\ComponentsBiz.pdb
+C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\ComponentModels.dll
+C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\ComponentModels.pdb
+C:\Users\hp\Desktop\GenericComponents\Components\obj\Debug\netcoreapp3.1\Components.csproj.AssemblyReference.cache

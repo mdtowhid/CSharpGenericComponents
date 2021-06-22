@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Components/1.0.0": {
+        "dependencies": {
+          "ComponentInterfaces": "1.0.0",
+          "ComponentModels": "1.0.0",
+          "ComponentsBiz": "1.0.0"
+        },
+        "runtime": {
+          "Components.dll": {}
+        }
+      },
+      "ComponentInterfaces/1.0.0": {
+        "runtime": {
+          "ComponentInterfaces.dll": {}
+        }
+      },
+      "ComponentModels/1.0.0": {
+        "dependencies": {
+          "ComponentInterfaces": "1.0.0"
+        },
+        "runtime": {
+          "ComponentModels.dll": {}
+        }
+      },
+      "ComponentsBiz/1.0.0": {
+        "dependencies": {
+          "ComponentInterfaces": "1.0.0"
+        },
+        "runtime": {
+          "ComponentsBiz.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Components/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ComponentInterfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ComponentModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ComponentsBiz/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

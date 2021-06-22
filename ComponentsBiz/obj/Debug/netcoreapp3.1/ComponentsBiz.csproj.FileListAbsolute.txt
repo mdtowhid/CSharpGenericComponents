@@ -1,0 +1,12 @@
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\bin\Debug\netcoreapp3.1\ComponentsBiz.deps.json
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\bin\Debug\netcoreapp3.1\ComponentsBiz.dll
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\bin\Debug\netcoreapp3.1\ComponentsBiz.pdb
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\bin\Debug\netcoreapp3.1\ComponentInterfaces.dll
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\bin\Debug\netcoreapp3.1\ComponentInterfaces.pdb
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.AssemblyInfo.cs
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.csproj.CopyComplete
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.dll
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.pdb
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.csproj.AssemblyReference.cache

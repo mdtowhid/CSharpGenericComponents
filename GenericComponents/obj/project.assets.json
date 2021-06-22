@@ -1,0 +1,157 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "ComponentInterfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ComponentInterfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ComponentInterfaces.dll": {}
+        }
+      },
+      "ComponentModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ComponentInterfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ComponentModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ComponentModels.dll": {}
+        }
+      },
+      "Components/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ComponentInterfaces": "1.0.0",
+          "ComponentModels": "1.0.0",
+          "ComponentsBiz": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Components.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Components.dll": {}
+        }
+      },
+      "ComponentsBiz/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ComponentInterfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ComponentsBiz.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ComponentsBiz.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ComponentInterfaces/1.0.0": {
+      "type": "project",
+      "path": "../ComponentInterfaces/ComponentInterfaces.csproj",
+      "msbuildProject": "../ComponentInterfaces/ComponentInterfaces.csproj"
+    },
+    "ComponentModels/1.0.0": {
+      "type": "project",
+      "path": "../ComponentModels/ComponentModels.csproj",
+      "msbuildProject": "../ComponentModels/ComponentModels.csproj"
+    },
+    "Components/1.0.0": {
+      "type": "project",
+      "path": "../Components/Components.csproj",
+      "msbuildProject": "../Components/Components.csproj"
+    },
+    "ComponentsBiz/1.0.0": {
+      "type": "project",
+      "path": "../ComponentsBiz/ComponentsBiz.csproj",
+      "msbuildProject": "../ComponentsBiz/ComponentsBiz.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "ComponentModels >= 1.0.0",
+      "Components >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\hp\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\GenericComponents\\GenericComponents\\GenericComponents.csproj",
+      "projectName": "GenericComponents",
+      "projectPath": "C:\\Users\\hp\\Desktop\\GenericComponents\\GenericComponents\\GenericComponents.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\GenericComponents\\GenericComponents\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\hp\\Desktop\\GenericComponents\\ComponentModels\\ComponentModels.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\GenericComponents\\ComponentModels\\ComponentModels.csproj"
+            },
+            "C:\\Users\\hp\\Desktop\\GenericComponents\\Components\\Components.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\GenericComponents\\Components\\Components.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
