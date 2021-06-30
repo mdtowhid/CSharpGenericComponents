@@ -1,18 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@*<h3>
-    @Html.Raw(ViewBag.EmployeeTableName)
-</h3>
-<table class="@Html.Raw(ViewBag.TableClasses)">
-    @Html.Raw(ViewBag.EmployeeTable)
-</table>
 
-<h3>
-    @Html.Raw(ViewBag.OrdersTable.TableName)
-</h3>
-<table class="@Html.Raw(ViewBag.OrdersTable.TableClasses)">
-    @Html.Raw(ViewBag.OrdersTable.TableHeaderAsHtmlString + ViewBag.OrdersTable.TableRowsAsHtmlString)
-</table>*@
 
-@*<h1>@ViewBag.Data.Address</h1>*@
+<form action="/home/addOrderToGrid/" method="post">
+    <div>
+        <label>Address</label>
+        <textarea name="Address" class="form-control"></textarea>
+    </div>
+
+    <div>
+        <input type="submit" value="Add" class="btn btn-sm btn-success"/>
+    </div>
+</form>
+
+
+<div>
+    @Html.Raw(ViewBag.OrderGrid)
+</div>

@@ -14,7 +14,7 @@ namespace Components
         private readonly static string thClose = "</th>";
         private readonly static string trOpen = "<tr>";
         private readonly static string trClose = "</tr>";
-        private readonly static string tdOpen = "</td>";
+        private readonly static string tdOpen = "<td>";
         private readonly static string tdClose = "</td>";
 
         private static string GetTableHeader(T tableClass)
@@ -60,7 +60,6 @@ namespace Components
         {
             PropertyInfo[] propertyInfos = model.GetType().GetProperties();
             string rowData = "";
-            List<string> rows = null;
             string id = "";
             foreach (PropertyInfo pi in propertyInfos)
             {
@@ -68,7 +67,7 @@ namespace Components
                 rowData += tdOpen + (string)pi.GetValue(model, null) + tdClose;
                 id = modelBase.Id;
             }
-            rowData += tdOpen+"<a href=" + actionUrl.Edit + "?id=" + id + ">Edit</a>";
+            rowData += tdOpen+"<a href=" + actionUrl.EditLink + "?id=" + id + ">Edit</a>"+tdClose;
             return rowData;
         }
 

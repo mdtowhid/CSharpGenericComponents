@@ -17,21 +17,21 @@ namespace ComponentModels
             {
                 new Order
                 {
-                    Address="djskdjskd",
-                    CustomerId="sdsdxs-dsdsd",
-                    Id="--dsd-dsdsndns",
+                    Address="A",
+                    CustomerId="A",
+                    Id="A",
                 },
                 new Order
                 {
-                    Address="djskdjskd",
-                    CustomerId="sdsds-dsdsd",
-                    Id="00e0343c",
+                    Address="B",
+                    CustomerId="B",
+                    Id="B",
                 },
                 new Order
                 {
-                    Address = "djskdjskd",
-                    CustomerId = "sdsds-dsdsd",
-                    Id = "00e0dosksd343",
+                    Address = "C",
+                    CustomerId = "C",
+                    Id = "C",
                 }
             };
         }

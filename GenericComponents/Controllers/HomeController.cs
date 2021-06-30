@@ -3,16 +3,14 @@ using GenericComponents.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Net;
-using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using ComponentInterfaces;
 using ComponentModels;
-using System.Dynamic;
-using System.Reflection;
+using System.Web;
+using Microsoft.AspNetCore.Http;
 
 namespace GenericComponents.Controllers
 {
@@ -29,10 +27,15 @@ namespace GenericComponents.Controllers
 
         public IActionResult Index()
         {
-            var orders = Order.GetOrders();
+            List<Order> orders = HttpContext.Session.GetObjectFromJson<List<Order>>("Orders");
+
+            if (orders == null)
+            {
+                orders = Order.GetOrders();
+            }
             var employees = Employee.GetEmployees();
             #region Components
-            ITableComponent tableComponent = TableComponent<Employee>.MakeTable(employees, new ActionUrl { Edit= "home/EditEmployee" });
+            ITableComponent tableComponent = TableComponent<Employee>.MakeTable(employees, new ActionUrl { EditLink= "home/EditEmployee" });
             ViewBag.EmployeeTable = tableComponent.TableHeaderAsHtmlString + tableComponent.TableRowsAsHtmlString;
             tableComponent.TableName = "Employee Table";
             ViewBag.EmployeeTableName = tableComponent.TableName;
@@ -45,9 +48,9 @@ namespace GenericComponents.Controllers
 
             Order o1 = new Order()
             {
-                Address = "dsdsdsdsds=dsds",
-                CustomerId = "dskjdksjd",
-                Id = "kdlsdls"
+                Address = "D",
+                CustomerId = "D",
+                Id = "D"
             };
             //var pn = o1.GetType().GetProperty("Address");
             //var propName = pn.Name;
@@ -69,8 +72,56 @@ namespace GenericComponents.Controllers
             //}
 
             //ViewBag.Data = co.ObjectTypeOfT;
-            var tr = co.X(o1);
+            var mappedOrder = Class1<Order>.AutoObjectMapper(null, orders[0]);
+            var mappedEmployees = Class1<Employee>.AutoObjectsMapper(null, employees);
+
+            //GridComponent<Order>.AddObjectToGrid(o1, orders);
+            //var cc = GridComponent<Order>.FindObjectFromGrid(2, orders);
+            //GridComponent<Order>.UpdateObjectTOGrid(3, cc, orders);
+            ///*GridComponent<Order>.RemoveObjectFromGrid(2, orders)*/;
+
+            //ITableComponent orTable = TableComponent<Order>.MakeTable(GridComponent<Order>.UpdateObjectTOGrid(3, cc, orders), new ActionUrl() { Edit = "[controller]/{id}" });
+
+            //ViewBag.OrTable = orTable.TableHeaderAsHtmlString + orTable.TableRowsAsHtmlString;
+
+            //GridComponent<Order>.GridBuilder(orders, new ActionUrl() { Delete = "/delete/", Edit = "edit/" });
+            //var orderTableHeader = ComponentHelpers.GetPropertyNames(orders[0]);
+            //var orderRows = ComponentHelpers.GetPropertyValues(orders);
+
+            ActionUrl url = new ActionUrl()
+            {
+                EditLink = "/home/edit",
+                DeleteLink = "/home/RemoveOrderFromGrid"
+            };
+
+            HttpContext.Session.SetObjectAsJson("Orders", orders);
+            var grid = GridComponent<Order>.GridBuilder(HttpContext.Session.GetObjectFromJson<List<Order>>("Orders"), url);
+            ViewBag.OrderGrid = grid;
+
+
             return View();
+        }
+
+        public IActionResult AddOrderToGrid(IFormCollection keyValuePairs)
+        {
+            Order newOrder = new Order
+            {
+                Id = Guid.NewGuid().ToString(),
+                CustomerId = Guid.NewGuid().ToString(),
+                Address = "Hard Address__",
+            };
+            List<Order> orders = HttpContext.Session.GetObjectFromJson<List<Order>>("Orders");
+            orders.Add(newOrder);
+            HttpContext.Session.SetObjectAsJson("Orders", orders);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult RemoveOrderFromGrid(int id)
+        {
+            List<Order> orders = HttpContext.Session.GetObjectFromJson<List<Order>>("Orders");
+            orders.Remove(orders[id]);
+            HttpContext.Session.SetObjectAsJson("Orders", orders);
+            return RedirectToAction("Index");
         }
 
         public IActionResult EditEmployee(string id)
@@ -83,6 +134,7 @@ namespace GenericComponents.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+            var c = HttpContext.Session.Get("jdksjd");
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
