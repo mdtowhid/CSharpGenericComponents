@@ -1,8 +1,6 @@
 ﻿using ComponentModels;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 
 namespace Components
 {
@@ -24,27 +22,19 @@ namespace Components
         private readonly static string actionHeader = "<th>Actions</th>";
         private readonly static string anchorOpen = "<a>";
         private readonly static string anchorClose = "</a>";
-        private static object obj = new object() { };
 
         public static string GridBuilder([Optional] List<T> models, [Optional] ActionUrl url)
         {
             string grid = "";
             if(models == null)
-            {
-                return "T Data is not provided. Session is also null for given class "+typeof(T).GetType().Name+". Sorry for bulding grid.";
-            }
+                return "T Data is not provided. Session is also null for given class " + typeof(T).GetType().Name + ". Sorry for bulding grid.";
+
             if (models.Count > 0)
             {
                 string header = "";
-                foreach (var item in ComponentHelpers.GetPropertyNames(models[0]))
-                {
-                    header+=thOpen + item + thClose;
-                }
-                if (url != null)
-                {
-                    header += actionHeader;
-                }
-                grid +=  trOpen + header + trClose;
+                foreach (var item in ComponentHelpers.GetPropertyNames(models[0])) header += thOpen + item + thClose;
+                if (url != null) header += actionHeader;
+                grid += trOpen + header + trClose;
                 
                 var rows = ComponentHelpers.GetPropertyValues(models);
                 grid += ShaveGrids(rows, tdOpen, tdClose, url);
@@ -70,7 +60,6 @@ namespace Components
             gridIndex = gridIndex - 1;
             string grid = string.Empty;
             bool isUrlExist = url != null ? true : false;
-            var urlProps = ComponentHelpers.GetPropertyNames(url);
             string editLink = string.Empty;
             string deleteLink = string.Empty;
 
@@ -82,57 +71,13 @@ namespace Components
             }
             var links = "";
             foreach (var item in gridData.Split(SplitChar))
-            {
-                if(item.Length > 0)
-                {
+                if (item.Length > 0)
                     grid += openingTag + item + closingTag;
-                }
-            }
-
             if (editLink.Length > 0)
-            {
                 links += "<a href=" + editLink + "?id=" + gridIndex + " class=\"btn btn-sm btn-outline-primary\">Edit" + anchorClose;
-            }
             if (deleteLink.Length > 0)
-            {
                 links += @"<a href=" + deleteLink + "?id=" + gridIndex + " class=\"btn btn-sm btn-outline-danger\">Delete" + anchorClose;
-            }
-
             return trOpen + grid + tdOpen + links + tdClose + trClose;
         }
-
-        static string XYZ([Optional] string item, [Optional] string link, [Optional] string openingTag, [Optional] string closingTag)
-        {
-            return "";
-        }
-
-        public static void Work(HttpContext context)
-        {
-            var cc = context.Session;
-        }
-
-
-        //public static List<T> AddObjectToGrid(T model, List<T>? models)
-        //{
-        //    models.Add(model);
-        //    return models;
-        //}
-
-        //public static T FindObjectFromGrid(int index, List<T>? models)
-        //{
-        //    return models[index];
-        //}
-
-        //public static List<T> UpdateObjectTOGrid(int index, T model, List<T>? models)
-        //{
-        //    models[index] = model;
-        //    return models;
-        //}
-
-        //public static List<T> RemoveObjectFromGrid(int index, List<T>? models)
-        //{
-        //    models.Remove(models[index]);
-        //    return models;
-        //}
     }
 }

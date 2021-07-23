@@ -52,41 +52,10 @@ namespace GenericComponents.Controllers
                 CustomerId = "D",
                 Id = "D"
             };
-            //var pn = o1.GetType().GetProperty("Address");
-            //var propName = pn.Name;
-            //var pname = o1.GetType().Name;
-            //var pnt1 = pn.PropertyType;
-            //var val = pn.GetValue(o1, null);
-            //ExpandoObject expando = new ExpandoObject();
 
             Class1<Order> co = new Class1<Order>();
-            //co.ObjectTypeOfT = o1;
-            ////co[propName] = val;
-            ////var c = co[propName];
-            //string data = String.Empty;
-            //foreach (PropertyInfo pi in o1.GetType().GetProperties())
-            //{
-            //    var propName = pi.Name;
-            //    var propValue = pi.GetValue(o1, null);
-            //    co[propName] = propValue;
-            //}
-
-            //ViewBag.Data = co.ObjectTypeOfT;
-            var mappedOrder = Class1<Order>.AutoObjectMapper(null, orders[0]);
+            var mappedOrder = Class1<Order>.AutoObjectMapper(null, orders[0], 0);
             var mappedEmployees = Class1<Employee>.AutoObjectsMapper(null, employees);
-
-            //GridComponent<Order>.AddObjectToGrid(o1, orders);
-            //var cc = GridComponent<Order>.FindObjectFromGrid(2, orders);
-            //GridComponent<Order>.UpdateObjectTOGrid(3, cc, orders);
-            ///*GridComponent<Order>.RemoveObjectFromGrid(2, orders)*/;
-
-            //ITableComponent orTable = TableComponent<Order>.MakeTable(GridComponent<Order>.UpdateObjectTOGrid(3, cc, orders), new ActionUrl() { Edit = "[controller]/{id}" });
-
-            //ViewBag.OrTable = orTable.TableHeaderAsHtmlString + orTable.TableRowsAsHtmlString;
-
-            //GridComponent<Order>.GridBuilder(orders, new ActionUrl() { Delete = "/delete/", Edit = "edit/" });
-            //var orderTableHeader = ComponentHelpers.GetPropertyNames(orders[0]);
-            //var orderRows = ComponentHelpers.GetPropertyValues(orders);
 
             ActionUrl url = new ActionUrl()
             {
@@ -97,7 +66,6 @@ namespace GenericComponents.Controllers
             HttpContext.Session.SetObjectAsJson("Orders", orders);
             var grid = GridComponent<Order>.GridBuilder(HttpContext.Session.GetObjectFromJson<List<Order>>("Orders"), url);
             ViewBag.OrderGrid = grid;
-
 
             return View();
         }

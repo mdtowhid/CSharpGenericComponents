@@ -58,3 +58,6 @@ C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\Microso
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\Razor\Views\Excel\UploadExcel.cshtml.g.cs
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\ExcelDataReader.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\ExcelDataReader.DataSet.dll

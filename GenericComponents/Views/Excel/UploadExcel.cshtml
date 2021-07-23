@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    object GetPropValue(object src, string propName)
+    {
+        return src.GetType().GetProperty(propName).GetValue(src, null);
+    }
+}
+
+@model List<Excel>
+
+<form action="/Excel/UploadExcel/" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Excel</label>
+        <input type="file" name="ExcelFile" id="file" />
+    </div>
+
+    <div>
+        <input type="submit" value="Add" class="btn btn-sm btn-success" />
+    </div>
+</form>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        Excel excel = item;
+        var infoes = excel.GetType().GetProperties();
+        if (item != null)
+        {
+            foreach (var pi in infoes)
+            {
+                var value = GetPropValue(excel, pi.Name);
+                if (value != null) 
+                { 
+                    <span class="badge badge-primary">@value</span>
+                }
+            }
+        }
+    }
+}
+

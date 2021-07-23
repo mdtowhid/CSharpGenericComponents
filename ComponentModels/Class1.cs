@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace ComponentModels
 {
@@ -24,8 +25,8 @@ namespace ComponentModels
                 pi.SetValue(ObjectTypeOfT, value, null);
             }
         }
-
-        public static T AutoObjectMapper(IDataReader dr, T o)
+        
+        public static T AutoObjectMapper(IDataReader dr, T o, [Optional] int drIndex)
         {
             var r = new Class1<T>();
             r.ObjectTypeOfT = o;
@@ -34,12 +35,14 @@ namespace ComponentModels
                 var propName = pi.Name;
                 var propValue = pi.GetValue(o, null);
                 var type = pi.GetType();
-                var typeName = type.Name;
                 r[propName] = propValue;
                 if (dr != null) 
                 {
-                    var c = dr[propName].ToString();
-                    r[propName] = c;
+                    var drIndexName = dr.GetName(drIndex);
+                    if (!string.IsNullOrEmpty(drIndexName))
+                    {
+                        r[propName] = dr[propName].ToString();
+                    }
                 }
             }
 
@@ -49,20 +52,13 @@ namespace ComponentModels
         public static List<T> AutoObjectsMapper(IDataReader dr, List<T> models)
         {
             List<T> modelsToReturn = new List<T>();
+            int drIndex = 0;
             foreach (T t in models)
             {
-                modelsToReturn.Add(AutoObjectMapper(dr, t));
+                modelsToReturn.Add(AutoObjectMapper(dr, t, drIndex));
+                drIndex++;
             }
             return modelsToReturn;
-        }
-
-
-        public static T GetItemFromListByAnyObjectKey<K>(List<T> models)
-        {
-            IDictionary<List<T>, string> cv = new Dictionary<List<T>, string>();
-
-            cv.Add(models, "mmmm");
-            return new T();
         }
     }
 }

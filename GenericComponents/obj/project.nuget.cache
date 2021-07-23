@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "eydyDUNBTozMDRCFfr4GqXBYxJFU4sivLLo6RoJnVwQR+zjEQxrcldRveDhfUgNFmg/2qSWmBUL7oNGdXWzmhg==",
+  "dgSpecHash": "01SPSDXJ20DygKdL6QA7Z/6oYEDI6yTTmpvPZ5GA4VrRDtTf6Wxy1ibZLkgf7HvrF1NGL6kkBhrL6MswH7u0nQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\Desktop\\GenericComponents\\GenericComponents\\GenericComponents.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hp\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\exceldatareader.dataset\\3.6.0\\exceldatareader.dataset.3.6.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

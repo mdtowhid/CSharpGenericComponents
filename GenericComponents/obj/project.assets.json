@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "ExcelDataReader/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {}
+        }
+      },
+      "ExcelDataReader.DataSet/3.6.0": {
+        "type": "package",
+        "dependencies": {
+          "ExcelDataReader": "3.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ExcelDataReader.DataSet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExcelDataReader.DataSet.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2524,6 +2545,49 @@
     }
   },
   "libraries": {
+    "ExcelDataReader/3.6.0": {
+      "sha512": "eXyxTwG7EEWpgQX3juZ2KcndqTqm/ydx9GXS2lUiMJU54U4h5eXdygRtVgINv0t60ezPWEb+lL7uM7Q+wm5BBA==",
+      "type": "package",
+      "path": "exceldatareader/3.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exceldatareader.3.6.0.nupkg.sha512",
+        "exceldatareader.nuspec",
+        "lib/net20/ExcelDataReader.dll",
+        "lib/net20/ExcelDataReader.pdb",
+        "lib/net20/ExcelDataReader.xml",
+        "lib/net45/ExcelDataReader.dll",
+        "lib/net45/ExcelDataReader.pdb",
+        "lib/net45/ExcelDataReader.xml",
+        "lib/netstandard1.3/ExcelDataReader.dll",
+        "lib/netstandard1.3/ExcelDataReader.pdb",
+        "lib/netstandard1.3/ExcelDataReader.xml",
+        "lib/netstandard2.0/ExcelDataReader.dll",
+        "lib/netstandard2.0/ExcelDataReader.pdb",
+        "lib/netstandard2.0/ExcelDataReader.xml"
+      ]
+    },
+    "ExcelDataReader.DataSet/3.6.0": {
+      "sha512": "miW3sWmPXnLM38YadRIfnhL4W4QZajpS6Q/OqsOpFJU5ct8h+M/fMpbGMm5INtsMP0Y1k0WK0stIfSW3RP31Xg==",
+      "type": "package",
+      "path": "exceldatareader.dataset/3.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exceldatareader.dataset.3.6.0.nupkg.sha512",
+        "exceldatareader.dataset.nuspec",
+        "lib/net20/ExcelDataReader.DataSet.dll",
+        "lib/net20/ExcelDataReader.DataSet.pdb",
+        "lib/net20/ExcelDataReader.DataSet.xml",
+        "lib/net35/ExcelDataReader.DataSet.dll",
+        "lib/net35/ExcelDataReader.DataSet.pdb",
+        "lib/net35/ExcelDataReader.DataSet.xml",
+        "lib/netstandard2.0/ExcelDataReader.DataSet.dll",
+        "lib/netstandard2.0/ExcelDataReader.DataSet.pdb",
+        "lib/netstandard2.0/ExcelDataReader.DataSet.xml"
+      ]
+    },
     "Microsoft.AspNetCore.Antiforgery/2.2.0": {
       "sha512": "fVQsSXNZz38Ysx8iKwwqfOLHhLrAeKEMBS5Ia3Lh7BJjOC2vPV28/yk08AovOMsB3SNQPGnE7bv+lsIBTmAkvw==",
       "type": "package",
@@ -7689,7 +7753,9 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "ComponentModels >= 1.0.0",
-      "Components >= 1.0.0"
+      "Components >= 1.0.0",
+      "ExcelDataReader >= 3.6.0",
+      "ExcelDataReader.DataSet >= 3.6.0"
     ]
   },
   "packageFolders": {
@@ -7741,6 +7807,16 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
+        "dependencies": {
+          "ExcelDataReader": {
+            "target": "Package",
+            "version": "[3.6.0, )"
+          },
+          "ExcelDataReader.DataSet": {
+            "target": "Package",
+            "version": "[3.6.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -7759,7 +7835,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -21,20 +21,14 @@ namespace Components
         {
             string tableHeader = "";
             PropertyInfo[] propertyInfos = tableClass.GetType().GetProperties();
-            foreach (PropertyInfo pi in propertyInfos)
-            {
-                tableHeader += thOpen + pi.Name + thClose;
-            }
+            foreach (PropertyInfo pi in propertyInfos) tableHeader += thOpen + pi.Name + thClose;
             return trOpen + tableHeader + trClose;
         }
         private static string MakeTableRow(T model)
         {
             PropertyInfo[] propertyInfos = model.GetType().GetProperties();
             string rowData = "";
-            foreach (PropertyInfo pi in propertyInfos)
-            {
-                rowData += tdOpen + (string)pi.GetValue(model, null) + tdClose;
-            }
+            foreach (PropertyInfo pi in propertyInfos) rowData += tdOpen + (string)pi.GetValue(model, null) + tdClose;
             return rowData;
         }
         public static ITableComponent MakeTable(List<T> models)
@@ -44,10 +38,7 @@ namespace Components
             if (models.Count > 0)
             {
                 var model = models[0];
-                foreach (var m in models)
-                {
-                    tableRows += "<tr>" + MakeTableRow(m) + "</tr>";
-                }
+                foreach (var m in models) tableRows += "<tr>" + MakeTableRow(m) + "</tr>";
                 tableComponentBiz.TableHeaderAsHtmlString = GetTableHeader(model);
                 tableComponentBiz.TableRowsAsHtmlString = tableRows;
                 tableComponentBiz.TableName = "Default Table";
@@ -75,10 +66,7 @@ namespace Components
         {
             string tableHeader = "";
             PropertyInfo[] propertyInfos = tableClass.GetType().GetProperties();
-            foreach (PropertyInfo pi in propertyInfos)
-            {
-                tableHeader += "<th>" + pi.Name + "</th>";
-            }
+            foreach (PropertyInfo pi in propertyInfos) tableHeader += "<th>" + pi.Name + "</th>";
             return "<tr>" + tableHeader + "<th>Actions</th></tr>";
         }
         public static ITableComponent MakeTable(List<T> models, ActionUrl actionUrl)
@@ -88,10 +76,7 @@ namespace Components
             if (models.Count > 0)
             {
                 var model = models[0];
-                foreach (var m in models)
-                {
-                    tableRows += "<tr>" + MakeTableRow(m, actionUrl) + "</tr>";
-                }
+                foreach (var m in models) tableRows += "<tr>" + MakeTableRow(m, actionUrl) + "</tr>";
                 tableComponentBiz.TableHeaderAsHtmlString = GetTableHeader(model, true);
                 tableComponentBiz.TableRowsAsHtmlString = tableRows;
                 tableComponentBiz.TableName = "Default Table";
