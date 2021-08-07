@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ComponentModels\ComponentModels.csproj" />
     <ProjectReference Include="..\Components\Components.csproj" />
+    <ProjectReference Include="..\Database\Database.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Database Schema";
+}
+
+
+<div style="border: 1px solid #ccc; padding: 30px">
+    <select id="">
+        @foreach (var item in ViewBag.Tables)
+        {
+            <option value="@item">@item</option>
+        }
+    </select>
+</div>
+<br />
+
+<div style="border: 1px solid #ccc; padding: 30px">
+    @foreach (var tableSchema in ViewBag.TablesSchemas)
+    {
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (string item in tableSchema)
+                {
+                    string[] sp = item.Split('_');
+                    <tr>
+
+                        <td>@sp[0]</td>
+                        <td>@sp[1]</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    }
+</div>
+

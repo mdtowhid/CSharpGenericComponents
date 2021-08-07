@@ -61,3 +61,12 @@ C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\Newtons
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\Razor\Views\Excel\UploadExcel.cshtml.g.cs
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\ExcelDataReader.dll
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\ExcelDataReader.DataSet.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\Database.dll
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\Database.pdb
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\Razor\Views\DbSchema\Index.cshtml.g.cs
