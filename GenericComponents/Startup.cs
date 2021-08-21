@@ -28,7 +28,8 @@ namespace GenericComponents
         {
             services.AddControllersWithViews();
             services.AddSession();
-            services.AddSingleton<ITableComponent, TableComponentBiz>();
+            services.AddSingleton<ITableComponent, TableComponentBiz>(); 
+            services.AddMvc().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
