@@ -14,3 +14,4 @@ C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\Compone
 C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\ComponentModels.dll
 C:\Users\hp\Desktop\GenericComponents\Components\bin\Debug\netcoreapp3.1\ComponentModels.pdb
 C:\Users\hp\Desktop\GenericComponents\Components\obj\Debug\netcoreapp3.1\Components.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\GenericComponents\Components\obj\Debug\netcoreapp3.1\Components.GeneratedMSBuildEditorConfig.editorconfig

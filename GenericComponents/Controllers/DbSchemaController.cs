@@ -35,7 +35,7 @@ namespace GenericComponents.Controllers
             bool c = CreateDirectory("DynamicFilesFolderPath");
             if (c == false)
             {
-                CreateAndWriteInFiles(ViewBag.Tables, schemas);
+                CreateAndWriteInFiles(ViewBag.Tables);
             }
             GetAllFilesNameFromFolder("DynamicFilesFolderPath");
             return View();
@@ -65,14 +65,14 @@ namespace GenericComponents.Controllers
 
             string q = @"SELECT COLUMN_NAME AS ColName, DATA_TYPE AS DataType
                 FROM INFORMATION_SCHEMA.COLUMNS
-                WHERE TABLE_NAME = '"+tableName+"' order by COLUMN_NAME ASC";
+                WHERE TABLE_NAME = '" + tableName + "' order by COLUMN_NAME ASC";
 
             SqlCommand cmd = DatabaseInfo.GetSqlCommand(q, _connection);
             using(SqlDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
                 {
-                    tableSchemas.Add(reader["ColName"].ToString() +"_"+ reader["DataType"].ToString());
+                    tableSchemas.Add(reader["ColName"].ToString() + "_" + reader["DataType"].ToString());
                 }
             }
 
@@ -111,26 +111,22 @@ namespace GenericComponents.Controllers
             return di != null ? true : false;
         }
 
-        public void CreateAndWriteInFiles(List<string> fileNames, List<List<string>> tableSchemas)
+        public void CreateAndWriteInFiles(List<string> tableNames)
         {
             string c = _webHostEnvironment.WebRootPath + "\\DynamicFilesFolderPath";
 
-            foreach (string fileName in fileNames)
+            foreach (string fileName in tableNames)
             {
                 string pathString = Path.Combine(c, fileName + ".cs");
-                foreach (List<string> tblSchema in tableSchemas)
+                string contents = "";
+                foreach (string colType in ListOfTableSchema(fileName))
                 {
-                    string props = "";
-                    foreach (string column in tblSchema)
-                    {
-                        string[] sp = column.Split('_');
-                        string type = sp[1];
-                        string name = sp[0];
-                        props += "public " + GetActualType(type) + " " + name + " { get; set; }\n";
-                    }
-
-                    System.IO.File.WriteAllText(pathString, props);
+                    string[] colTypeArray = colType.Split('_');
+                    string colName = colTypeArray[0];
+                    string type = colTypeArray[1];
+                    contents += "public " + GetActualType(type) + " " + colName + " { get; set; }\n";
                 }
+                System.IO.File.WriteAllText(pathString, contents);
             }
         }
 

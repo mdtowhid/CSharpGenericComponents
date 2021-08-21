@@ -2,6 +2,9 @@
     ViewData["Title"] = "Database Schema";
 }
 
+<div class="jumbotron">
+    @Html.Partial("~/Views/Shared/_Test.cshtml")
+</div>
 
 <div style="border: 1px solid #ccc; padding: 30px">
     <select id="">
@@ -16,6 +19,7 @@
 <div style="border: 1px solid #ccc; padding: 30px">
     @foreach (var tableSchema in ViewBag.TablesSchemas)
     {
+        <h1 class="alert alert-secondary">AAA vvvvvvA</h1>
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -40,4 +44,10 @@
 
     }
 </div>
+
+<script>
+    function AssignValue(event, el) {
+        console.log(event, el);
+    }
+</script>
 

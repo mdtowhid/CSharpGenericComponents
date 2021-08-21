@@ -17,7 +17,6 @@ C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\Generic
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\GenericComponents.RazorAssemblyInfo.cache
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\GenericComponents.RazorAssemblyInfo.cs
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\staticwebassets\GenericComponents.StaticWebAssets.Manifest.cache
-C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\staticwebassets\GenericComponents.StaticWebAssets.xml
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\scopedcss\bundle\GenericComponents.styles.css
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\GenericComponents.TagHelpers.input.cache
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\GenericComponents.TagHelpers.output.cache
@@ -70,3 +69,4 @@ C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\runtime
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\Database.dll
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\bin\Debug\net5.0\Database.pdb
 C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\Razor\Views\DbSchema\Index.cshtml.g.cs
+C:\Users\hp\Desktop\GenericComponents\GenericComponents\obj\Debug\net5.0\Razor\Views\Shared\_Test.cshtml.g.cs

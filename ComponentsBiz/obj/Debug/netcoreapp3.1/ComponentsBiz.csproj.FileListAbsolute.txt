@@ -10,3 +10,4 @@ C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\Comp
 C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.dll
 C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.pdb
 C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\GenericComponents\ComponentsBiz\obj\Debug\netcoreapp3.1\ComponentsBiz.GeneratedMSBuildEditorConfig.editorconfig

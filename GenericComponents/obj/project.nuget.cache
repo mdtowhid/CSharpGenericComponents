@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EzlAtZc3rlPmqPU7U0PwWwYGZ519+GfpHQociz0JroN0r+pV7A19Y8w+jvNbgzsRAKyrVA/L/jcwYVQcUbip4w==",
+  "dgSpecHash": "/vHKJXXXyV2tmOJ7yqcpblS2NEVz5jjLVrozIvMQr8pidgtawCkf/LSFymyo1ZepqsNxqsU/Zqpau3hZ3OvLKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\Desktop\\GenericComponents\\GenericComponents\\GenericComponents.csproj",
   "expectedPackageFiles": [
@@ -172,7 +172,8 @@
     "C:\\Users\\hp\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\hp\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\hp\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.8\\microsoft.netcore.app.host.win-x64.5.0.8.nupkg.sha512"
   ],
   "logs": []
 }

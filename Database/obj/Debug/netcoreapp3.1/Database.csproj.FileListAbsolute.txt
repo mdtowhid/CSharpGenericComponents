@@ -7,3 +7,4 @@ C:\Users\hp\Desktop\GenericComponents\Database\obj\Debug\netcoreapp3.1\Database.
 C:\Users\hp\Desktop\GenericComponents\Database\obj\Debug\netcoreapp3.1\Database.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\GenericComponents\Database\obj\Debug\netcoreapp3.1\Database.dll
 C:\Users\hp\Desktop\GenericComponents\Database\obj\Debug\netcoreapp3.1\Database.pdb
+C:\Users\hp\Desktop\GenericComponents\Database\obj\Debug\netcoreapp3.1\Database.GeneratedMSBuildEditorConfig.editorconfig

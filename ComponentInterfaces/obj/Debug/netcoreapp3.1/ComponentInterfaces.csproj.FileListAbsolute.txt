@@ -7,3 +7,4 @@ C:\Users\hp\Desktop\GenericComponents\ComponentInterfaces\obj\Debug\netcoreapp3.
 C:\Users\hp\Desktop\GenericComponents\ComponentInterfaces\obj\Debug\netcoreapp3.1\ComponentInterfaces.dll
 C:\Users\hp\Desktop\GenericComponents\ComponentInterfaces\obj\Debug\netcoreapp3.1\ComponentInterfaces.pdb
 C:\Users\hp\Desktop\GenericComponents\ComponentInterfaces\obj\Debug\netcoreapp3.1\ComponentInterfaces.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\GenericComponents\ComponentInterfaces\obj\Debug\netcoreapp3.1\ComponentInterfaces.GeneratedMSBuildEditorConfig.editorconfig

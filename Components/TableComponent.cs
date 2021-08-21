@@ -84,5 +84,16 @@ namespace Components
             }
             return tableComponentBiz;
         }
+
+        public void WorkWithTuple()
+        {
+            int[] intA = new int[] { 1,2,3,4,5 };
+            dynamic numbers;
+
+            foreach (int item in intA)
+            {
+                numbers = Tuple.Create(item);
+            }
+        }
     }
 }
